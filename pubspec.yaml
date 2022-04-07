@@ -1,0 +1,74 @@
+name: insta_pattern
+description: A new Flutter project.
+
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.2
+
+  # Pattern GetX
+  get: ^4.6.1
+  get_storage: ^2.0.3
+
+  # firebase
+  firebase_core: ^1.13.1
+  firebase_auth: ^3.3.9
+  cloud_firestore: ^3.1.10
+  firebase_database: ^9.0.8
+  firebase_storage: ^10.2.9
+  firebase_messaging: ^11.2.8
+
+
+  # Image and Fonts, Media
+  cached_network_image: ^3.2.0
+  image_picker: ^0.8.4+10
+  font_awesome_flutter: ^9.2.0
+  share_plus: ^4.0.3
+
+  # http and notifications
+  http: ^0.13.4
+  flutter_local_notifications: ^9.4.0
+  device_info_plus: ^3.2.2
+
+  # Animation and Widgets
+  flutter_staggered_grid_view: ^0.6.1
+  shimmer: ^2.0.0
+  flutter_styled_toast: ^2.0.0
+  path_provider: ^2.0.9
+  intl: ^0.17.0
+  logger: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^1.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/translations/
+
+  fonts:
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/billabong.ttf

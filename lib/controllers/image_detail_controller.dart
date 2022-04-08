@@ -4,7 +4,6 @@ import '../models/user_model.dart';
 import '../services/firestore_service.dart';
 import '../services/http_service.dart';
 import '../services/local_db_service.dart';
-import '../services/log_service.dart';
 
 class ImageDetailController extends GetxController {
   Post? post;
@@ -22,9 +21,10 @@ class ImageDetailController extends GetxController {
     getAllData();
   }
 
-  void getPost(Post post) {
+  void getPost(Post post) async{
     this.post = post;
     likedByUsers = List.from(post.likedByUsers.map((e) => User.fromJson(e)));
+    user = await loadUser();
     update();
   }
 
@@ -46,10 +46,8 @@ class ImageDetailController extends GetxController {
     });
   }
 
-  void getAllData() {
-    loadUser().then((value) {
-      followingCondition();
-    });
+  void getAllData() async{
+    await followingCondition();
   }
 
   Future<User> loadUser() async {

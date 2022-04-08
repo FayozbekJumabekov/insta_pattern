@@ -22,6 +22,7 @@ class _ImageDetailPageState extends State<ImageDetailPage> {
   void initState() {
     super.initState();
     Get.find<ImageDetailController>().getPost(widget.post);
+    Get.find<ImageDetailController>().followingCondition();
   }
 
   @override
